@@ -55,7 +55,7 @@ int main() {
 	{
 	strcat(path, args[1]);
 	}
-	fopen (path, "w");
+	fopen (path, "a+");
 	}	
         pid_t pid = fork();
 
