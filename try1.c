@@ -36,7 +36,8 @@ int main() {
             exit(0);
         }
 
-        if (strcmp(args[0], "cd") == 0) {
+        if (strcmp(args[0], "cd") == 0)
+	{
             if (args[1] == NULL) {
                 fprintf(stderr, "mysh: expected argument to \"cd\"\n");
             } else {
@@ -46,6 +47,16 @@ int main() {
             }
             continue;
         }
+	else if (strcmp(args[0], "touch") == 0)
+	{
+	char path[256];
+	
+	if (getcwd(path, sizeof(path)) != NULL)
+	{
+	strcat(path, args[1]);
+	}
+	fopen (path, "w");
+	}	
         pid_t pid = fork();
 
         if (pid == -1) {
