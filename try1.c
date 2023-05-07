@@ -9,13 +9,15 @@
 int main() {
     char command[MAX];
     char *args[MAX/2 + 1];
-    char *token;
-
+    char *token; 
+    int check;
+    
     while (1) {
         printf("AH $$ ");
         fflush(stdout);
 
-        fgets(command, MAX, stdin);
+        if (fgets(command, MAX, stdin) == NULL)
+        return (-1);
 
         
         command[strcspn(command, "\n")] = '\0';
