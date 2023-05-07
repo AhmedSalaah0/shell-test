@@ -42,7 +42,7 @@ int main() {
                 fprintf(stderr, "mysh: expected argument to \"cd\"\n");
             } else {
                 if (chdir(args[1]) != 0) {
-                    perror("mysh");
+                    perror(args[1]);
                 }
             }
             continue;
