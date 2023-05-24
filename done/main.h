@@ -24,4 +24,6 @@ void close_pipes(int pip[][2], int pipnum);
 void execute_child(char **args, int i, int pip[][2], int pipnum);
 void execute_pipe(char **cmd, int pipnum);
 void execute_env();
+char **read_input(char *line, size_t *n);
+int run_command(char **comm, char **argv);
 #endif

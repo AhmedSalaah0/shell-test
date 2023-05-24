@@ -10,7 +10,7 @@ int execute_cd(const char *dir)
 {
 if (chdir(dir) != 0)
 {
-perror("chdir error");
+perror("error");
 return -1;
 }
 return 0;

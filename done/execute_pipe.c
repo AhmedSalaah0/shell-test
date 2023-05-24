@@ -3,7 +3,6 @@
  * execute_pipe - execute command which include pipe
  * @cmd: the command
  * @pipnum: number of pipes
- * Return: Nothing
 */
 void execute_pipe(char **cmd, int pipnum)
 {
@@ -30,7 +29,9 @@ pid = fork();
 if (pid < 0) {
 perror("fork error");
 exit(EXIT_FAILURE);
-} else if (pid == 0) {
+}
+else if (pid == 0)
+{
 execute_child(args, i, pip, pipnum);
 }
 }
