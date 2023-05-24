@@ -13,7 +13,7 @@ int s;
 if (pid == -1)
 {
 perror("error");
-return -1;
+return (-1);
 }
 else if (pid == 0)
 {
@@ -22,10 +22,7 @@ exit(EXIT_SUCCESS);
 }
 else
 {
-
 waitpid(pid, &s, 0);
-
 }
-
-return 0;
+return (0);
 }

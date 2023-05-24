@@ -28,17 +28,13 @@ if (stat(fpath, &buffer) == 0)
 free(path_cp);
 return (fpath);
 }
-else
-{
 free(fpath);
 path_tkn = strtok(NULL, ":");
-}
+
 }
 free(path_cp);
 }
 if (stat(command, &buffer) == 0)
-{
 return (command);
-}
 return (NULL);
 }

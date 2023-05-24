@@ -9,6 +9,9 @@ int main(int ac, char **argv)
 {
 char *line = NULL;
 size_t n = 0;
+char **args;
+
+(void)ac;
 
 while (1)
 {
@@ -18,7 +21,7 @@ if (getline(&line, &n, stdin) == -1)
 perror("getline error");
 return (-1);
 }
-char **args = read_input(line, &n);
+args = read_input(line, &n);
 if (args == NULL)
 {
 fprintf(stderr, "Failed to read input\n");
@@ -34,8 +37,6 @@ execute(args, argv);
 }
 
 free (args);
-
 }
-
 return (0);
 }

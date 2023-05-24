@@ -13,7 +13,7 @@
 #define maxin_size 1024
 #define max_tkn 64
 #define maxtkn_num 64
-
+extern char **environ;
 int execute(char **comm, char **argv);
 char *get_location(char *command);
 void execute_pipe(char **cmd,int token_count);

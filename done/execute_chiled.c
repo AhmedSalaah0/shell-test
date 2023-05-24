@@ -2,8 +2,9 @@
 /**
  * execute_child - run a child excution
  * @args: num of argu.
- * @i 
- * 
+ * @i:intger
+ * @pip: array of pip
+ * @pipnum: number of pipes
 */
 
 void execute_child(char **args, int i, int pip[][2], int pipnum)

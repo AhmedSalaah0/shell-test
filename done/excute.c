@@ -10,7 +10,7 @@
 int execute(char **comm, char **argv)
 {
 if (!comm)
-return 0;
+return (0);
 
 if (strcmp(comm[0], "cd") == 0)
 {
@@ -24,10 +24,14 @@ else
 printf("cd: No directory specified\n");
 }
 }
+if (strcmp(comm[0], "exit") == 0)
+{
+exit(-1);
+}
 else
 {
 run_command(comm, argv);
 }
 
-return 0;
+return (0);
 }

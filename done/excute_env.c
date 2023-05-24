@@ -2,11 +2,12 @@
 /**
  * execute_env - function handle env case
 */
-void execute_env() {
-extern char **environ;
+void execute_env(void)
+{ 
 int i = 0;
 
-while (environ[i] != NULL) {
+while (environ[i] != NULL)
+{
 printf("%s\n", environ[i]);
 i++;
 }

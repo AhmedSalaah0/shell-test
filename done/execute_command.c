@@ -28,5 +28,5 @@ printf("%s: %s: command not found\n", argv[0], cmd);
 exit(EXIT_FAILURE);
 }
 
-return 0;
+return (0);
 }
